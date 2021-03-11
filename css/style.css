@@ -116,6 +116,9 @@ header .navbar .navbar-toggler-icon .hamburger-inner, header .navbar .navbar-tog
 	font-weight:bold;
 	
 }
+
+
+
 .mx-centre {
     margin-right: auto!important;
     margin-left: 10rem;
@@ -139,6 +142,14 @@ header .navbar .navbar-toggler-icon .hamburger-inner, header .navbar .navbar-tog
 		margin-left: 5rem;
 	}	
 }
+@media screen and (max-width: 768px){
+	.mx-centre {
+		margin-right: auto!important;
+		margin-left: auto!important;
+	}	
+}
+
+
 @media screen and (max-width: 991px){
 	.navbar .navbar-brand { 
 		font-family: 'Scriptin';
@@ -176,6 +187,7 @@ header .navbar .navbar-toggler-icon .hamburger-inner, header .navbar .navbar-tog
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
   }
+ 
   
   .dropdown-content .menu {
 	color: #64321b;
@@ -201,6 +213,30 @@ header .navbar .navbar-toggler-icon .hamburger-inner, header .navbar .navbar-tog
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
+  }
+  @media screen and (max-width: 767px){
+	.dropdown {
+		position: relative;
+		display:block;
+	  }
+	  .dropdown-content {
+		display: none;
+		position:absolute;
+		background-color: rgba(249, 249, 249, 0.8);
+		min-width: 200px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 10;
+	  }
+	  .menu .submenu{
+		display: none;
+		position:relative;
+		float:none;
+		background-color: rgba(249, 249, 249, 0.8);
+		min-width: 200px;
+		left:0%;
+		/* top: 100%; */
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+	  }
   }
 
   .dropdown-content div:hover>.submenu{
@@ -231,7 +267,8 @@ header .main-head #with-love {
 	font-size: 7vw;
 	padding: 4vh 0px 4vh 0px;
 	background-color: rgba(86, 83, 76, 0.70);
-	border-radius: 15px
+	border-radius: 15px;
+	/* position:absolute; */
 }
 header .main-head .cant-resist {
 	font-family: 'Proxima Nova';
@@ -271,10 +308,20 @@ header .main-head .our-menu:hover {
 	header .main-head #with-love {
 		font-size: 25px;
 	}
+	
  }
  @media screen and (max-width: 768px) { 
 	header .main-head #with-love {
 		font-size: 15px;
+		position:relative;
+		top:-100%;
+		z-index: 1;
+	}
+	header .main-head .cant-resist {
+		display: none;
+	}
+	header .main-head .our-menu {
+		display: none;
 	}
  }
  @media screen and (max-width: 768px) {
